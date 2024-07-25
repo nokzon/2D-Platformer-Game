@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-const SPEED = 400.0
-const JUMP_VELOCITY = -900.0 # minus values is going upwards because of godot's axis system
+const SPEED = 300.0
+const JUMP_VELOCITY = -850.0 # minus values is going upwards because of godot's axis system
 @onready var sprite_2d = $Sprite2D
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -37,3 +37,4 @@ func _physics_process(delta):
 	
 	var isLeft = velocity.x < 0
 	sprite_2d.flip_h = isLeft
+	
